@@ -1,27 +1,245 @@
 * {
-    margin:0;
-    padding:0;
-    font-family: ROBOTO, serif;
-}
-nav {
-    background-color: rgb(87,222,135);
-    height:50px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav li {
-    border: 1px solid black;
-    display:inline-block;
-    line-height:50px;
-    text-align:center;
+body {
+    width: 1050px;
+    font-family: roboto;
+    background-color: #ededed;
+    color: #343740;
+    margin: auto;
+}
+
+#more p, #titel, #copyright {
+    color: white;
+}
+
+#navigatie {
+    position: fixed;
+    top: 5px;
+    height: 55px;
+    width: 1050px;
+    background-color: rgba(87, 222, 135, 0.3);
+    z-index: 1;
+}
+
+.nav_item {
+    font-weight: 700;
+    display: inline-block;
     width: 100px;
+    height: 15px;
+    color: #093156;
+    text-align: center;
+    padding: 20px 0;
 }
-#img_li {
-    margin-left:50px;
-    width:20px;
-    height:auto;
+
+#nav_logo {
+    float: left;
+    margin-left: 50px;
+    width: 50px;
+    height: 55px;
+    background-image: url("../assets/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-nav img{
-    vertical-align: middle;
-    width:30px;
-    height:20px;
+
+#banner {
+    position: relative;
+    margin-top: 70px;
+}
+
+#banner img {
+    max-width: 100%;
+}
+
+
+#titel {
+    position: absolute;
+    right: 25px;
+    top: 170px;
+}
+
+#more p {
+    display: block;
+    width: 100%;
+    background-color: #343740;
+    text-align: center;
+}
+
+#more {
+    position: relative;
+    clear: both;
+    margin: 10px auto;
+    width: 150px;
+}
+
+#blogs hr {
+    border-width: 0;
+    height: 1px;
+    background-color: black;
+}
+
+.blog_banner {
+    object-fit: cover;
+    height: auto;
+    max-width: 100%;
+}
+
+.blog_item:hover .blog_banner {
+    opacity: 70%;
+}
+
+.blog_beschrijving {
+    padding-top: 5px;
+    height: 100px;
+    overflow: hidden;
+
+}
+
+.blog_inhoud {
+    padding-top: 5px;
+    font-size: small;
+}
+
+#blogs h3 {
+    font-size: initial;
+    font-weight: 400;
+}
+
+.blog_detail {
+    font-size: x-small;
+    padding-bottom: 5px;
+}
+
+.blog_detail span {
+    float: right;
+}
+
+#actiecentrum {
+    clear: both;
+}
+
+.actiepunt {
+    float: left;
+    margin: 10px;
+    width: calc(25% - 20px);
+    height: 250px;
+}
+
+.actiepunt:nth-child(1) {
+    margin-left: 0;
+}
+
+.actiepunt:nth-child(4) {
+    margin-right: 0;
+}
+
+.actiepunt img {
+    width: 100%;
+}
+
+.actiepunt p {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #093156;
+    color: white;
+}
+
+footer {
+    position: relative;
+    clear: both;
+    clear: both;
+    background-color: black;
+    height: 100px;
+}
+
+footer p {
+    display: block;
+    width: 100%;
+    line-height: 100px;
+    vertical-align: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .blog_item {
+        display: block;
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+
+    .blog_item:nth-child(3), .blog_item:nth-child(7) {
+        padding-left: 0;
+
+    }
+
+    .blog_item:nth-child(6), .blog_item:nth-child(10) {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    body {
+        width: 700px;
+        margin: auto;
+    }
+
+    #navigatie {
+        width: 700px;
+
+    }
+
+    #titel {
+        top: 100px;
+    }
+
+    .blog_item {
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .blog_banner {
+        min-width: 100%;
+    }
+
+    .blog_item:nth-child(odd) {
+        padding-left: 0;
+
+    }
+
+    .blog_item:nth-child(even) {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    body {
+        width: 95%;
+    }
+    #navigatie {
+        width: 100%;
+        left:0;
+    }
+
+    .blog_item {
+         display: block;
+         width: 100%;
+         padding: 10px;
+     }
+
+    .blog_banner {
+        min-width: 100%;
+    }
+    #titel {
+        display:none;
+    }
 }
